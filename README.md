@@ -12,8 +12,8 @@ npm install -g codeceptjs webdriverio
 ```
 
 ### Configuring test.
-- Replace {username} with your username in codecept.conf.js and .gitlab-ci.yml
-- Replace {accessToken}  with your username in codecept.conf.js
+- Replace {LT username} with your username in codecept.conf.js and .gitlab-ci.yml
+- Replace {LT accesskey}  with your username in codecept.conf.js
 - List of supported platfrom, browser, version can be found at https://www.lambdatest.com/capabilities-generator/
 
 
