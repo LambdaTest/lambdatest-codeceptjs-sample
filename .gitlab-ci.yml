@@ -1,0 +1,11 @@
+image: node:8.10
+
+before_script:
+  - |
+    cd /builds/{LT username}/lambdatest-codeceptjs-sample
+    npm install
+    npm install -g codeceptjs webdriverio
+  
+job:
+  script:
+    codeceptjs run --steps 
