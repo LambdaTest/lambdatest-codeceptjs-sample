@@ -1,4 +1,4 @@
-# lambdatest-codeceptjs-sample
+# LambdaTest Codeceptjs Sample
 Sample CodeceptJS with webdriverio Automation Scripts For LambdaTest Selenium Grid
  
 
