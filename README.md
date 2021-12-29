@@ -8,7 +8,7 @@ Sample CodeceptJS with webdriverio Automation Scripts For LambdaTest Selenium Gr
 
 ## Install Selenium codeceptjs & webdriverio
 ```bash
-npm install -g codeceptjs webdriverio
+npm install
 ```
 
 ### Configuring test.
@@ -19,7 +19,7 @@ npm install -g codeceptjs webdriverio
 
 ### Executing test
 ```bash
-codeceptjs run --steps 
+npm test
 ```
 ## About LambdaTest
 

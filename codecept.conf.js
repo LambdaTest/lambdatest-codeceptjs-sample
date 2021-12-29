@@ -7,14 +7,14 @@ exports.config = {
          browser: 'chrome',
          host: 'hub.lambdatest.com',
          port: 80,
-         user: '{LT username}',
-         key: '{LT accesskey}',
+         user: process.env.LT_USERNAME, //Your Username
+         key: process.env.LT_ACCESS_KEY,  ////Your Access key
          desiredCapabilities:{
             name: "Codeceptio Sample Test",
-            platform: "win10",
+            build: "Codeceptio",
+            platformName: "Windows 10",
             browserName: 'Chrome',
-            version: '76',
-            video: 'true'
+            version: 'latest'
          },
       }
    },
