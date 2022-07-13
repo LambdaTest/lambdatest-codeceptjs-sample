@@ -16,7 +16,16 @@ npm install
 - Replace {LT accesskey}  with your username in codecept.conf.js
 - List of supported platfrom, browser, version can be found at https://www.lambdatest.com/capabilities-generator/
 
+### Set LambdaTest `Username` and `Access Key` in environment variables.
 
+  * For **Linux/macOS**:
+  ```bash
+  export LT_USERNAME="YOUR_USERNAME" export LT_ACCESS_KEY="YOUR ACCESS KEY"
+  ```
+  * For **Windows**:
+  ```bash
+  set LT_USERNAME="YOUR_USERNAME" set LT_ACCESS_KEY="YOUR ACCESS KEY"
+  ```
 ### Executing test
 ```bash
 npm test
