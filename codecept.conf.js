@@ -2,7 +2,7 @@ exports.config = {
   tests: './*_test.js',
   output: './output',
   helpers: {
-      WebDriverIO: {
+      WebDriver: {
          url: 'http://google.com/ncr',
          browser: 'chrome',
          host: 'hub.lambdatest.com',
