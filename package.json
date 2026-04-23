@@ -20,5 +20,8 @@
     "codeceptjs": "^3.7.5",
     "selenium-webdriver": "^4.38.0",
     "webdriverio": "^9.20.0"
+  },
+  "devDependencies": {
+    "codeceptjs-lambdatest-service": "^1.0.4"
   }
 }
