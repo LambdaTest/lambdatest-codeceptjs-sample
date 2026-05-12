@@ -1,12 +1,12 @@
-# LambdaTest CodeceptJS Sample - Desktop & Android Real Device
+# TestMu AI CodeceptJS Sample - Desktop & Android Real Device — TestMu AI (Formerly LambdaTest)
 
-Sample CodeceptJS with WebDriverIO Automation Scripts for LambdaTest Selenium Grid and Real Device Cloud. This project supports both desktop web automation and Android real device testing.
+Sample CodeceptJS with WebDriverIO Automation Scripts for TestMu AI Selenium Grid and Real Device Cloud. This project supports both desktop web automation and Android real device testing.
 
 ## Prerequisites
 
 - Node.js (v14 or higher)
 - npm (Node Package Manager)
-- LambdaTest Account ([Sign up here](https://accounts.lambdatest.com/register))
+- TestMu AI Account ([Sign up here](https://accounts.lambdatest.com/register))
 
 ## Install Node Package Manager
 
@@ -28,9 +28,9 @@ npm install
 
 ## Configuration
 
-### Set LambdaTest Credentials
+### Set TestMu AI Credentials
 
-Get your Username and Access Key from [LambdaTest Automation Dashboard](https://automation.lambdatest.com/)
+Get your Username and Access Key from [TestMu AI Automation Dashboard](https://automation.lambdatest.com/)
 
 #### For Windows (Command Prompt):
 ```bash
@@ -68,14 +68,14 @@ lambdatest-codeceptjs-sample/
 
 ### Desktop Web Automation (codecept.conf.js)
 
-Configured for desktop browser testing on LambdaTest Selenium Grid:
+Configured for desktop browser testing on TestMu AI Selenium Grid:
 - **Platform:** Windows 10
 - **Browser:** Chrome (latest)
 - **Hub:** hub.lambdatest.com
 
 ### Android Real Device (codecept.android.conf.js)
 
-Configured for Android real device testing on LambdaTest Real Device Cloud:
+Configured for Android real device testing on TestMu AI Real Device Cloud:
 - **Platform:** Android
 - **Device:** Configurable (Pixel, Galaxy, etc.)
 - **Hub:** mobile-hub.lambdatest.com
@@ -178,8 +178,8 @@ Scenario('test on android device', async ({ I }) => {
 
 ### Finding Device Details
 Generate capabilities for specific devices:
-- [LambdaTest Capabilities Generator](https://www.lambdatest.com/capabilities-generator/)
-- [LambdaTest Real Device List](https://www.lambdatest.com/list-of-browsers)
+- [TestMu AI Capabilities Generator](https://www.testmuai.com/capabilities-generator/)
+- [TestMu AI Real Device List](https://www.testmuai.com/list-of-browsers)
 
 ## Device Name Patterns
 
@@ -231,8 +231,8 @@ desiredCapabilities: {
 ## Viewing Test Results
 
 After running tests, view results on:
-- [LambdaTest Automation Dashboard](https://automation.lambdatest.com/)
-- [LambdaTest Real Device Dashboard](https://appautomation.lambdatest.com/)
+- [TestMu AI Automation Dashboard](https://automation.lambdatest.com/)
+- [TestMu AI Real Device Dashboard](https://appautomation.lambdatest.com/)
 
 Features available in dashboard:
 - Video recordings
@@ -256,7 +256,7 @@ Error: Invalid credentials
 ```
 Error: Device not found
 ```
-**Solution:** Check device availability on LambdaTest platform or use regex pattern like "Galaxy.*"
+**Solution:** Check device availability on TestMu AI platform or use regex pattern like "Galaxy.*"
 
 **Issue 3: Timeout Errors**
 ```
@@ -309,40 +309,26 @@ exports.config = {
 ## Resources
 
 - [CodeceptJS Documentation](https://codecept.io/)
-- [LambdaTest Documentation](https://www.lambdatest.com/support/docs/)
-- [LambdaTest Capabilities Generator](https://www.lambdatest.com/capabilities-generator/)
-- [LambdaTest Community](https://community.lambdatest.com/)
+- [TestMu AI Documentation](https://www.testmuai.com/support/docs/)
+- [TestMu AI Capabilities Generator](https://www.testmuai.com/capabilities-generator/)
+- [TestMu AI Community](https://community.testmuai.com/)
 - [WebDriverIO Documentation](https://webdriver.io/)
 
-## About LambdaTest
+## 🚀 [LambdaTest is Now TestMu AI](https://www.testmuai.com/lambdatest-is-now-testmuai/)
 
-[LambdaTest](https://www.lambdatest.com/) is a cloud-based testing platform that provides:
+👋 Welcome to TestMu AI, the next evolution of LambdaTest. As of January 2026, LambdaTest has officially rebranded to TestMu AI. We have evolved from a cross-browser testing cloud into a unified, AI-native quality engineering platform designed for the modern DevOps era.
 
-- **3000+ Browser & OS combinations** for desktop web testing
-- **Real Android and iOS devices** for mobile app and web testing
-- **Selenium Grid** for automated cross-browser testing
-- **Appium Grid** for mobile automation
-- **Parallel testing** to reduce execution time
-- **CI/CD integrations** with Jenkins, CircleCI, Travis, GitLab, and more
-- **Debugging tools** including video recordings, screenshots, and logs
+Whether you have been part of the LambdaTest community for years or are just discovering TestMu AI, our mission remains the same: to help you ship faster with high-scale test execution, autonomous testing, and deep quality analytics.
 
-Perfect for bringing your [selenium automation testing](https://www.lambdatest.com/selenium-automation) and [mobile app testing](https://www.lambdatest.com/real-device-cloud) to a scalable cloud infrastructure.
+**🔄 Our Rebrand Journey**
 
-## Support
+We chose the name TestMu AI to reflect our shift towards intelligent, autonomous testing. While our identity has changed, our core technology and commitment to the testing community stay the same.
 
-For issues and questions:
-- [GitHub Issues](https://github.com/LambdaTest/lambdatest-codeceptjs-sample/issues)
-- [LambdaTest Support](https://www.lambdatest.com/support/)
-- Email: support@lambdatest.com
+**✨ Specialties**
 
-## License
+- 🤖 AI-Native Test Execution (Formerly LambdaTest)
+- ⚡ Autonomous Test Automation
+- 🌐 Cross-Browser & Mobile Testing
+- 📊 Unified Quality Intelligence
 
-ISC
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
----
-
-**Happy Testing! 🚀**
+👉 Find [LambdaTest's New Home](https://www.testmuai.com/).
