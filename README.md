@@ -1,348 +1,117 @@
-# LambdaTest CodeceptJS Sample - Desktop & Android Real Device
+# Run Selenium Tests with CodeceptJS on TestMu AI (Formerly LambdaTest)
 
-Sample CodeceptJS with WebDriverIO Automation Scripts for LambdaTest Selenium Grid and Real Device Cloud. This project supports both desktop web automation and Android real device testing.
+<p align="center">
+  <a href="https://www.testmuai.com/"><img src="https://img.shields.io/badge/MADE%20BY%20TestMu%20AI-000000.svg?style=for-the-badge&labelColor=000" alt="Made by TestMu AI"></a>
+  <a href="https://www.npmjs.com/package/codeceptjs"><img src="https://img.shields.io/npm/v/codeceptjs.svg?style=for-the-badge&labelColor=000000" alt="CodeceptJS version"></a>
+  <a href="https://community.testmuai.com/"><img src="https://img.shields.io/badge/Join%20the%20community-blueviolet.svg?style=for-the-badge&labelColor=000000" alt="Community"></a>
+</p>
 
-## Prerequisites
+## Getting Started
 
-- Node.js (v14 or higher)
-- npm (Node Package Manager)
-- LambdaTest Account ([Sign up here](https://accounts.lambdatest.com/register))
+[TestMu AI](https://www.testmuai.com/) (Formerly LambdaTest) is the world's first full-stack AI Agentic Quality Engineering platform that empowers teams to test intelligently, smarter, and ship faster. Built for scale, it offers a full-stack testing cloud with 10K+ real devices and 3,000+ browsers. With AI-native test management, MCP servers, and agent-based automation, TestMu AI supports Selenium, Appium, Playwright, and all major frameworks. 
 
-## Install Node Package Manager
+With TestMu AI (Formerly LambdaTest), you can run CodeceptJS tests across real browsers and operating systems. This sample shows how to configure CodeceptJS to run on the TestMu AI cloud.
 
-Download & Install Node.js and npm from:
-https://nodejs.org/
+- [Sign up on TestMu AI](https://www.testmuai.com/register/) (Formerly LambdaTest).
+- Follow the [TestMu AI Documentation](https://www.testmuai.com/support/docs/) for the full setup walkthrough.
 
-## Project Setup
+### Prerequisites
 
-### 1. Clone or Download the Repository
+- Node.js and npm (latest stable)
+- A TestMu AI (Formerly LambdaTest) account with your username and access key
+
+### Setup
+
+Clone and install dependencies:
+
 ```bash
-git clone https://github.com/LambdaTest/lambdatest-codeceptjs-sample.git
-cd lambdatest-codeceptjs-sample
-```
-
-### 2. Install Dependencies
-```bash
+git clone https://github.com/LambdaTest/lambdatest-codeceptjs-sample && cd lambdatest-codeceptjs-sample
 npm install
 ```
 
-## Configuration
+Set your credentials as environment variables.
 
-### Set LambdaTest Credentials
+**macOS / Linux:**
 
-Get your Username and Access Key from [LambdaTest Automation Dashboard](https://automation.lambdatest.com/)
-
-#### For Windows (Command Prompt):
-```bash
-set LT_USERNAME=YOUR_USERNAME
-set LT_ACCESS_KEY=YOUR_ACCESS_KEY
-```
-
-#### For Windows (PowerShell):
-```powershell
-$env:LT_USERNAME="YOUR_USERNAME"
-$env:LT_ACCESS_KEY="YOUR_ACCESS_KEY"
-```
-
-#### For Linux/macOS:
 ```bash
 export LT_USERNAME="YOUR_USERNAME"
 export LT_ACCESS_KEY="YOUR_ACCESS_KEY"
 ```
 
-## Project Structure
-```
-lambdatest-codeceptjs-sample/
-├── codecept.conf.js              # Desktop web automation config
-├── codecept.android.conf.js      # Android real device config
-├── googleTest_test.js            # Desktop web test
-├── androidTest_test.js           # Android real device test
-├── steps_file.js                 # Custom step definitions
-├── steps.d.ts                    # TypeScript definitions
-├── package.json                  # Project dependencies and scripts
-├── jsconfig.json                 # JavaScript config
-└── README.md                     # This file
+**Windows:**
+
+```bash
+set LT_USERNAME="YOUR_USERNAME"
+set LT_ACCESS_KEY="YOUR_ACCESS_KEY"
 ```
 
-## Configuration Files
+### Run tests
 
-### Desktop Web Automation (codecept.conf.js)
-
-Configured for desktop browser testing on LambdaTest Selenium Grid:
-- **Platform:** Windows 10
-- **Browser:** Chrome (latest)
-- **Hub:** hub.lambdatest.com
-
-### Android Real Device (codecept.android.conf.js)
-
-Configured for Android real device testing on LambdaTest Real Device Cloud:
-- **Platform:** Android
-- **Device:** Configurable (Pixel, Galaxy, etc.)
-- **Hub:** mobile-hub.lambdatest.com
-
-#### Sample Android Capabilities:
-```javascript
-desiredCapabilities: {
-  "lt:options": {
-    "w3c": true,
-    "platformName": "android",
-    "deviceName": "Galaxy S24",      // Specific device
-    "platformVersion": "14",
-    "isRealMobile": true,
-    "build": "CodeceptJS Android Build",
-    "name": "Android Test",
-    "video": true,                    // Record video
-    "visual": true,                   // Visual logs
-    "network": true,                  // Network logs
-    "console": true                   // Console logs
-  }
-}
-```
-
-## Running Tests
-
-### Run Desktop Web Tests
 ```bash
 npm run test:desktop
 ```
 
-### Run Android Real Device Tests
+For mobile execution:
+
 ```bash
 npm run test:android
 ```
 
-### Run All Tests (Default - Desktop)
-```bash
-npm test
+View results on your TestMu AI dashboard.
+
+### Local testing with TestMu AI Tunnel
+
+To test locally hosted apps, set up the TestMu AI tunnel. OS-specific guides:
+
+- [Local Testing on Windows](https://www.testmuai.com/support/docs/local-testing-for-windows/)
+- [Local Testing on macOS](https://www.testmuai.com/support/docs/local-testing-for-macos/)
+- [Local Testing on Linux](https://www.testmuai.com/support/docs/local-testing-for-linux/)
+
+Add the following to your capabilities:
+
+```js
+tunnel: true,
 ```
 
-### Run Specific Test File
-```bash
-npx codeceptjs run googleTest_test.js --steps
-npx codeceptjs run androidTest_test.js --steps -c codecept.android.conf.js
-```
+## Contributions
 
-## Available NPM Scripts
+Contributions are welcome. Open an issue to discuss your idea before submitting a pull request. When reporting bugs, include your Node.js version, OS, and CodeceptJS version.
 
-| Script | Description |
-|--------|-------------|
-| `npm test` | Run desktop web tests with default config |
-| `npm run test:desktop` | Run desktop web automation tests |
-| `npm run test:android` | Run Android real device tests |
+## TestMu AI (Formerly LambdaTest) Community
 
-## Customizing Tests
+Connect with testers and developers in the [TestMu AI Community](https://community.testmuai.com/). Ask questions, share what you are building, and discuss best practices in test automation and DevOps.
+  
+## TestMu AI (Formerly LambdaTest) Certifications
 
-### Adding New Desktop Tests
+Earn free [TestMu AI Certifications](https://www.testmuai.com/certifications/) for testers, developers, and QA engineers. Validate your skills in Selenium, Cypress, Playwright, Appium, Espresso and more. Industry-recognized, shareable on LinkedIn, and built by practitioners, not marketers.
 
-Create a new test file (e.g., `myTest_test.js`):
-```javascript
-const { I } = inject();
+## Learning Resources by TestMu AI (Formerly LambdaTest)
 
-Feature('My Feature');
+Learn modern testing through tutorials, guides, videos, and weekly updates:
 
-Scenario('My test scenario', async ({ I }) => {
-  await I.amOnPage('https://example.com');
-  await I.see('Example Domain');
-});
-```
+* [TestMu AI Blog](https://www.testmuai.com/blog/)
+* [TestMu AI Learning Hub](https://www.testmuai.com/learning-hub/)
+* [TestMu AI on YouTube](https://www.youtube.com/@TestMuAI)
+* [TestMu AI Newsletter](https://www.testmuai.com/newsletter/)
+  
+## LambdaTest is Now TestMu AI
 
-### Adding New Android Tests
+On **January 12, 2026**, [LambdaTest evolved to TestMu AI](https://www.testmuai.com/lambdatest-is-now-testmuai/), the world's first fully autonomous **Agentic AI Quality Engineering Platform**.
 
-Create a new test file with mobile-specific selectors:
-```javascript
-const { I } = inject();
+Same team. Same infrastructure. Same customer accounts. All existing LambdaTest logins, scripts, capabilities, and integrations continue to work without change.
 
-Feature('Mobile Feature');
+👉 Find the new home for [LambdaTest](https://www.testmuai.com).
 
-Scenario('test on android device', async ({ I }) => {
-  await I.amOnPage('https://www.google.com');
-  await I.waitForElement('textarea[name="q"]', 10);
-  await I.fillField('textarea[name="q"]', 'LambdaTest');
-  await I.pressKey('Enter');
-  await I.wait(2);
-});
-```
+### How LambdaTest Evolved into TestMu AI
 
-## Supported Devices and Platforms
+In 2017, we launched LambdaTest with a simple mission: make testing fast, reliable, and accessible. As LambdaTest grew, we expanded into Test Intelligence, Visual Regression Testing, Accessibility Testing, API Testing, and Performance Testing, covering the full depth of the testing lifecycle.
 
-### Desktop Browsers
-- Chrome, Firefox, Safari, Edge, IE
-- Windows, macOS, Linux
-- Multiple versions available
+As software development entered the AI era, testing had to evolve, too. We rebuilt the architecture to be AI-native from the ground up, with autonomous agents that **plan, author, execute, analyze, and optimize tests** while keeping humans in the loop. The platform integrates with your repos, CI, IDEs, and terminals, continuously learning from every code change and development signal.
 
-### Android Real Devices
-- Samsung Galaxy series (S24, S23, S22, etc.)
-- Google Pixel series (Pixel 8, Pixel 7, etc.)
-- OnePlus, Xiaomi, and more
-- Android versions 9 to 14+
+That evolution earned a new name: **TestMu AI**, built for an AI-first future of quality engineering. TestMu is not a new name for us. It is the name of our annual community conference, which has brought together 100,000+ quality engineers to discuss how AI would reshape testing, long before that became an industry norm. 
 
-### Finding Device Details
-Generate capabilities for specific devices:
-- [LambdaTest Capabilities Generator](https://www.lambdatest.com/capabilities-generator/)
-- [LambdaTest Real Device List](https://www.lambdatest.com/list-of-browsers)
-
-## Device Name Patterns
-
-You can use regex patterns for device selection:
-```javascript
-"deviceName": "Galaxy.*"     // Any Galaxy device
-"deviceName": "Pixel.*"      // Any Pixel device
-"deviceName": "Galaxy S24"   // Specific device
-```
-
-## Additional Capability Options
-
-### Desktop Web Capabilities
-```javascript
-desiredCapabilities: {
-  name: "Test Name",
-  build: "Build Name",
-  platformName: "Windows 10",
-  browserName: "Chrome",
-  version: "latest",
-  resolution: "1920x1080",
-  video: true,
-  network: true,
-  console: true,
-  visual: true
-}
-```
-
-### Android Real Device Capabilities
-```javascript
-"lt:options": {
-  "w3c": true,
-  "platformName": "android",
-  "deviceName": "Galaxy S24",
-  "platformVersion": "14",
-  "isRealMobile": true,
-  "build": "Build Name",
-  "name": "Test Name",
-  "deviceOrientation": "portrait",  // or "landscape"
-  "video": true,
-  "visual": true,
-  "network": true,
-  "console": true,
-  "geoLocation": "US",
-  "timezone": "UTC"
-}
-```
-
-## Viewing Test Results
-
-After running tests, view results on:
-- [LambdaTest Automation Dashboard](https://automation.lambdatest.com/)
-- [LambdaTest Real Device Dashboard](https://appautomation.lambdatest.com/)
-
-Features available in dashboard:
-- Video recordings
-- Screenshots
-- Network logs
-- Console logs
-- Test metadata
-- Performance metrics
-
-## Troubleshooting
-
-### Common Issues
-
-**Issue 1: Authentication Error**
-```
-Error: Invalid credentials
-```
-**Solution:** Verify your LT_USERNAME and LT_ACCESS_KEY environment variables are set correctly.
-
-**Issue 2: Device Not Available**
-```
-Error: Device not found
-```
-**Solution:** Check device availability on LambdaTest platform or use regex pattern like "Galaxy.*"
-
-**Issue 3: Timeout Errors**
-```
-Error: Timeout waiting for element
-```
-**Solution:** Increase wait time or check element selectors:
-```javascript
-await I.waitForElement('selector', 15); // 15 seconds
-```
-
-**Issue 4: Windows Script Error**
-```
-SyntaxError: missing ) after argument list
-```
-**Solution:** Use `npx codeceptjs` or just `codeceptjs` in scripts instead of direct path.
-
-## Debug Mode
-
-Run tests in debug mode with verbose output:
-```bash
-npx codeceptjs run --steps --debug -c codecept.android.conf.js
-```
-
-## Parallel Testing
-
-For running tests in parallel, you can modify your configuration:
-```javascript
-// codecept.conf.js
-exports.config = {
-  // ... other config
-  multiple: {
-    parallel: {
-      chunks: 2,
-      browsers: ['chrome', 'firefox']
-    }
-  }
-}
-```
-
-## Best Practices
-
-1. **Use explicit waits** instead of hard waits when possible
-2. **Use environment variables** for sensitive data
-3. **Keep test data separate** from test logic
-4. **Use descriptive test names** and scenario descriptions
-5. **Organize tests** by feature or functionality
-6. **Clean up test data** after test execution
-7. **Use Page Objects** for complex applications (optional)
-
-## Resources
-
-- [CodeceptJS Documentation](https://codecept.io/)
-- [LambdaTest Documentation](https://www.lambdatest.com/support/docs/)
-- [LambdaTest Capabilities Generator](https://www.lambdatest.com/capabilities-generator/)
-- [LambdaTest Community](https://community.lambdatest.com/)
-- [WebDriverIO Documentation](https://webdriver.io/)
-
-## About LambdaTest
-
-[LambdaTest](https://www.lambdatest.com/) is a cloud-based testing platform that provides:
-
-- **3000+ Browser & OS combinations** for desktop web testing
-- **Real Android and iOS devices** for mobile app and web testing
-- **Selenium Grid** for automated cross-browser testing
-- **Appium Grid** for mobile automation
-- **Parallel testing** to reduce execution time
-- **CI/CD integrations** with Jenkins, CircleCI, Travis, GitLab, and more
-- **Debugging tools** including video recordings, screenshots, and logs
-
-Perfect for bringing your [selenium automation testing](https://www.lambdatest.com/selenium-automation) and [mobile app testing](https://www.lambdatest.com/real-device-cloud) to a scalable cloud infrastructure.
+What started as a high-performance cloud testing platform has transformed into an AI-native, multi-agent system powering a connected, end-to-end quality layer. That evolution defined a new identity: LambdaTest evolved into TestMu AI, built for an AI-first future of quality engineering.
 
 ## Support
 
-For issues and questions:
-- [GitHub Issues](https://github.com/LambdaTest/lambdatest-codeceptjs-sample/issues)
-- [LambdaTest Support](https://www.lambdatest.com/support/)
-- Email: support@lambdatest.com
-
-## License
-
-ISC
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
----
-
-**Happy Testing! 🚀**
+Got a question? Email [support@testmuai.com](mailto:support@testmuai.com) or chat with us 24x7 from our chat portal.
